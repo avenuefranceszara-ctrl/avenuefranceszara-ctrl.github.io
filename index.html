@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kyle's Portfolio</title>
+<title>Frances Zara Avenue | Portfolio</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -18,182 +23,357 @@ body{
     color:white;
 }
 
-header{
+/* NAVIGATION */
+
+nav{
     background:#0d2c54;
-    padding:20px;
-    text-align:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-header h1{
-    font-size:2.5rem;
+nav h2{
+    color:#4da6ff;
 }
 
-header p{
-    margin-top:10px;
-    color:#c8d6e5;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#4da6ff;
+}
+
+/* HERO */
 
 .hero{
     text-align:center;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 .hero img{
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     border-radius:50%;
-    border:4px solid #4da6ff;
     object-fit:cover;
+    border:5px solid #4da6ff;
+    margin-bottom:20px;
 }
 
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    color:#c8d6e5;
+    margin-top:10px;
+}
+
+/* SECTIONS */
+
 section{
-    padding:50px 10%;
+    padding:70px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:40px;
     color:#4da6ff;
+    font-size:2rem;
 }
 
-.about,
-.contact{
+/* ABOUT */
+
+.about{
     background:#102c54;
+    padding:30px;
     border-radius:15px;
-    padding:25px;
+    line-height:1.8;
 }
+
+/* SKILLS */
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
     justify-content:center;
+    gap:25px;
 }
 
-.skill{
-    background:#174a86;
-    padding:12px 20px;
-    border-radius:30px;
+.skill-card{
+    background:#102c54;
+    width:180px;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
 }
+
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+
+.skill-card img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+/* PROJECTS */
 
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .project-card{
     background:#102c54;
-    padding:20px;
+    padding:25px;
     border-radius:15px;
     transition:.3s;
 }
 
 .project-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .project-card h3{
-    margin-bottom:10px;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    margin-bottom:20px;
+    color:#dce6f2;
 }
 
 .project-card a{
-    display:inline-block;
-    margin-top:10px;
     color:#4da6ff;
     text-decoration:none;
+    font-weight:bold;
 }
 
+/* CONTACT */
+
+.contact{
+    background:#102c54;
+    padding:30px;
+    border-radius:15px;
+    line-height:2;
+}
+
+/* FOOTER */
+
 footer{
+    background:#061322;
     text-align:center;
     padding:20px;
-    background:#061322;
-    margin-top:40px;
+    margin-top:50px;
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Frances Zara Avenue</h1>
-    <p>IT Student | Java Developer </p>
-</header>
+<!-- NAVBAR -->
+
+<nav>
+    <h2>FZA</h2>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
 
 <div class="hero">
-    <img src="profile.jpg" alt="Profile Picture">
-    <h2>Hello, I'm Zara!</h2>
-    <p>Welcome to my personal portfolio website.</p>
+
+    <!-- Upload your photo and name it profile.jpg -->
+    <img src="profile.jpg" alt="Frances Zara Avenue">
+
+    <h1>Frances Zara Avenue</h1>
+
+    <p>
+        Information Technology Student |
+        Aspiring Software Developer
+    </p>
+
 </div>
 
-<section>
+<!-- ABOUT -->
+
+<section id="about">
+
     <h2 class="section-title">About Me</h2>
+
     <div class="about">
+
         <p>
-            I am an Information Technology student at Davao del Norte State College,
-            I am passionate about
-            software development, database management, and creating
-            practical systems that solve real-world problems.
+            Hello! I'm Frances Zara Avenue, an Information Technology student at 
+            Davao del Norte State College,
+            passionate about software development, database management,
+            and creating innovative digital solutions.
         </p>
+
+        <br>
+
+        <p>
+            I enjoy building systems that solve real-world problems,
+            learning new technologies, and improving my skills in
+            Java programming, web development, and database design.
+        </p>
+
     </div>
+
 </section>
 
-<section>
+<!-- SKILLS -->
+
+<section id="skills">
+
     <h2 class="section-title">Skills</h2>
+
     <div class="skills">
-        <div class="skill">Java</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">NetBeans</div>
-        <div class="skill">Database Design</div>
+
+        <div class="skill-card">
+            <img src="java.png" alt="Java">
+            <h3>Java</h3>
+        </div>
+
+        <div class="skill-card">
+            <img src="mysql.png" alt="MySQL">
+            <h3>MySQL</h3>
+        </div>
+
+        <div class="skill-card">
+            <img src="html.png" alt="HTML">
+            <h3>HTML</h3>
+        </div>
+
+        <div class="skill-card">
+            <img src="css.png" alt="CSS">
+            <h3>CSS</h3>
+        </div>
+
     </div>
+
 </section>
 
-<section>
+<!-- PROJECTS -->
+
+<section id="projects">
+
     <h2 class="section-title">Projects</h2>
 
     <div class="projects">
 
         <div class="project-card">
+
             <h3>Payroll Management System</h3>
-            <p>A Java and MySQL-based payroll management application.</p>
-            <a href="https://github.com/YOUR_USERNAME/payroll-system">
+
+            <p>
+                Payroll system developed using Java and MySQL with
+                employee management, salary computation,
+                and payslip generation.
+            </p>
+
+            <!-- REPLACE # WITH YOUR PROJECT LINK -->
+            <a href="#" target="_blank">
                 View Project →
             </a>
+
         </div>
 
         <div class="project-card">
+
             <h3>Java Applications</h3>
-            <p>Collection of Java projects and desktop applications.</p>
-            <a href="https://github.com/YOUR_USERNAME">
+
+            <p>
+                Collection of Java desktop applications and
+                object-oriented programming projects.
+            </p>
+
+            <!-- REPLACE # WITH YOUR PROJECT LINK -->
+            <a href="#" target="_blank">
                 View Project →
             </a>
+
         </div>
 
         <div class="project-card">
+
             <h3>Database Projects</h3>
-            <p>MySQL database design and management projects.</p>
-            <a href="https://github.com/YOUR_USERNAME">
+
+            <p>
+                MySQL database projects including
+                ERDs, normalization, and database design.
+            </p>
+
+            <!-- REPLACE # WITH YOUR PROJECT LINK -->
+            <a href="#" target="_blank">
                 View Project →
             </a>
+
         </div>
 
     </div>
+
 </section>
 
-<section>
+<!-- CONTACT -->
+
+<section id="contact">
+
     <h2 class="section-title">Contact</h2>
 
     <div class="contact">
-        <p><strong>Email:</strong> avenuezara222@email.com</p>
-        <p><strong>GitHub:</strong> github.com/avenuefranceszara-ctrl</p>
-        <p><strong>Facebook:</strong> https://www.facebook.com/zara.gorjj</p>
+
+        <p><strong>Name:</strong> Frances Zara Avenue</p>
+
+        <p>
+            <strong>Email:</strong>
+            your-email@example.com
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            github.com/YOUR_USERNAME
+        </p>
+
+        <p>
+            <strong>Facebook:</strong>
+            Add your Facebook profile link here
+        </p>
+
     </div>
+
 </section>
 
 <footer>
-    <p>© 2026 Frances Zara Avenue. All Rights Reserved.</p>
+
+    <p>
+        © 2026 Frances Zara Avenue.
+        All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
